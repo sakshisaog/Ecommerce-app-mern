@@ -1,14 +1,11 @@
-// import { addToCart, getUserCart, updateCart, clearCart} from "../controllers/cartController.js"
-// import express from 'express'
-// import authUser from "../middleware/auth.js"
+import express from "express";
+import { addToCart,updateCart,getUserCart } from "../controllers/cartcontroller.js";
+import authuser from "../middleware/auth.js";
 
-// const cartRouter = express.Router()
+const cartRouter = express.Router()
 
-// cartRouter.post('/get', authUser, getUserCart)
-// cartRouter.post('/add', authUser, addToCart)
-// cartRouter.post('/update', authUser, updateCart)
+cartRouter.post('/get',authuser,getUserCart)
+cartRouter.post('/add',authuser,addToCart)
+cartRouter.post('/update',authuser,updateCart)
 
-// cartRouter.post('/clear', 
-//     clearCart
-// );
-// export default cartRouter
+export default cartRouter

@@ -68,28 +68,21 @@ try {
     res.json({success:false, message:error.message})
 }}
 
+
 const adminLogin = async (req, res) => {
-  try {
-    const { email, password } = req.body;
-
-    // console.log("ENV EMAIL:", process.env.ADMIN_EMAIL);
-    // console.log("ENV PASSWORD:", process.env.ADMIN_PASSWORD);
-    // console.log("BODY:", email, password);
-
-    if (
-      email === process.env.ADMIN_EMAIL &&
-      password === process.env.ADMIN_PASSWORD
-    ) {
-      const token = jwt.sign({ email }, process.env.JWT_SECRET);
-      res.json({ success: true, token });
-    } else {
-      res.json({ success: false, message: "Invalid Credentials" });
+    try {
+        const {email, password} = req.body
+        if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD){
+            const token = jwt.sign({email, password}, process.env.JWT_SECRET)
+            res.json({success:true, token})
+        }else {
+            res.json({success:false, message:"Invalid Credentials"})
+        }
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, message:error.message})   
     }
-  } catch (error) {
-    console.log(error);
-    res.json({ success: false, message: error.message });
-  }
-};
+}
 export {
     loginUser,
     registerUser,
