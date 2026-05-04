@@ -10,3 +10,14 @@ a.active hr{
         color: white;
     }
 }
+
+
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Hide scrollbar visually */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
