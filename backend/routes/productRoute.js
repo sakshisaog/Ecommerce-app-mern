@@ -1,7 +1,7 @@
 import express from "express";
 import { addProduct,listProduct,removeProduct,singleProduct } from "../controllers/productController.js";
 import upload from "../middleware/multer.js";
-import adminauth from "../middleware/adminauth.js";
+import adminauth from "../middleware/adminAuth.js";
 
 const productRouter = express.Router();
 

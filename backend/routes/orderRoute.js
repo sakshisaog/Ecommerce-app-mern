@@ -1,5 +1,5 @@
 import express from 'express'
-import adminauth from '../middleware/adminauth.js'
+import adminauth from '../middleware/adminAuth.js'
 import {
   placeOrder,
   placeOrderStripe,
