@@ -1,5 +1,5 @@
 import express from 'express'
-import userModel from '../models/usermodel.js'
+import userModel from '../models/userModel.js'
 
 
 //add products to user cart
