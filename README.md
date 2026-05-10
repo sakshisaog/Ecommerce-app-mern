@@ -40,7 +40,7 @@ A full-stack MERN e-commerce application with JWT authentication, Stripe/Razorpa
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/justBUY.git
+git clone https://github.com/sakshisaog/Ecommerce-app-mern.git
 ```
 
 Install dependencies:
